@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Sun, 04 Aug 2019 06:17:53 GMT"
   },
   "generation": [
     {
@@ -18,6 +19,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Sun, 04 Aug 2019 05:38:24 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationComponent",
+      "templateVersion": "1.4.0",
+      "dateTimeStamp": "Sun, 04 Aug 2019 06:34:42 GMT"
     }
   ],
   "codeCheckingTriggers": {
@@ -38,5 +44,9 @@
       "xml": "fioriXmlAnalysis",
       "js": "fioriJsValidator"
     }
+  },
+  "deploy": {
+    "destination": "LPT",
+    "name": "zbk5_mdt"
   }
 }
