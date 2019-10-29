@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("com.hcc.bk5.mdt.controller.Master", {
+	return Controller.extend("com.hcc.bk5.mdt.controller.MasterMdt", {
 
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
@@ -13,12 +13,12 @@ sap.ui.define([
 		onInit: function() {
 		},
 
-		onItemPress: function(oEvent) {
+		onItemPressMdt: function(oEvent) {
 			var oElement = oEvent.getSource();
 			var sObjectPath = oElement.getBindingContextPath();
 			var sMdtId = oElement.getModel().getData(sObjectPath).MdtId;
 
-			this.getOwnerComponent().getRouter().navTo("TargetDetail", {
+			this.getOwnerComponent().getRouter().navTo("TargetDetailMdt", {
 				MdtId: sMdtId
 			});
 		}

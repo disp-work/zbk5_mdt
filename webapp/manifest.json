@@ -78,37 +78,37 @@
 				"routerClass": "sap.f.routing.Router",
 				"viewType": "XML",
 				"viewPath": "com.hcc.bk5.mdt.view",
-				"controlId": "fcl",
+				"controlId": "FclMdt",
 				"transition": "slide",
 				"async": true,
 				"clearControlAggregation": false
 			},
 			"routes": [
 				{
-					"name": "TargetMaster",
+					"name": "TargetMasterMdt",
 					"pattern": "",
 					"layout": "OneColumn",
 					"target": [
-						"TargetMaster"
+						"TargetMasterMdt"
 					]
 				},
 				{
-					"name": "TargetDetail",
-					"pattern": "detail/:MdtId:/",
+					"name": "TargetDetailMdt",
+					"pattern": "DetailMdt/:MdtId:/",
 					"layout": "TwoColumnsMidExpanded",
 					"target": [
-						"TargetMaster",
-						"TargetDetail"
+						"TargetMasterMdt",
+						"TargetDetailMdt"
 					]
 				}
 			],
 			"targets": {
-				"TargetMaster": {
-					"viewName": "Master",
+				"TargetMasterMdt": {
+					"viewName": "MasterMdt",
 					"controlAggregation": "beginColumnPages"
 				},
-				"TargetDetail": {
-					"viewName": "Detail",
+				"TargetDetailMdt": {
+					"viewName": "DetailMdt",
 					"controlAggregation": "midColumnPages"
 				}
 			}
@@ -128,17 +128,6 @@
 					"defaultCountMode": "Request"
 				},
 				"preload": true
-			},
-			"valueHelp": {
-				"type": "sap.ui.model.json.JSONModel",
-				"dataSource": "valueHelp",
-				"preload": true
-			},
-			"app": {
-				"type": "sap.ui.model.json.JSONModel",
-				"settings": {},
-				"uri": "model/app.json",
-				"preload": false
 			}
 		},
 		"resources": {

@@ -6,8 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true,
-    "lastBuildDateTime": "Sun, 04 Aug 2019 06:17:53 GMT"
+    "buildRequired": false,
+    "lastBuildDateTime": "Mon, 05 Aug 2019 10:09:15 GMT"
   },
   "generation": [
     {
@@ -47,6 +47,6 @@
   },
   "deploy": {
     "destination": "LPT",
-    "name": "zbk5_mdt"
+    "name": "ZBK5_MDT"
   }
 }

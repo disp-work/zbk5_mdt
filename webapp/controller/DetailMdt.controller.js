@@ -1,16 +1,17 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
+	"com/hcc/bk5/mdt/model/formatter",
 	"sap/ui/core/UIComponent"
-], function(Controller, UIComponent) {
+], function(Controller, formatter, UIComponent) {
 	"use strict";
 
-	return Controller.extend("com.hcc.bk5.mdt.controller.Detail", {
-
+	return Controller.extend("com.hcc.bk5.mdt.controller.DetailMdt", {
+		formatter: formatter,
 		_MdtId: null,
 
 		onInit: function() {
 			var oRouter = UIComponent.getRouterFor(this);
-			oRouter.getRoute("TargetDetail").attachMatched(this.__onRouteMatched, this);
+			oRouter.getRoute("TargetDetailMdt").attachMatched(this.__onRouteMatched, this);
 		},
 
 		__onRouteMatched: function(oEvent) {
@@ -32,8 +33,8 @@ sap.ui.define([
 		/**
 		 * Set the full screen mode to false and navigate to master page
 		 */
-		onCloseDetailPress: function() {
-			this.getOwnerComponent().getRouter().navTo("TargetMaster", {}, true);
+		onCloseDetailPressMdt: function() {
+			this.getOwnerComponent().getRouter().navTo("TargetMasterMdt", {}, true);
 		}
 
 	});
